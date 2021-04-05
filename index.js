@@ -8,7 +8,7 @@ const validatePassword = (password) => {
   let hasCaps = false
   let hasLower = false
   let hasNums = false
-  let hasChar = false
+  let hasChara = false
 
 
 
@@ -17,10 +17,10 @@ const validatePassword = (password) => {
     if (cap.includes(password[i])) hasCaps = true
     if (notcap.includes(password[i])) hasLower = true
     if (numerics.includes(password[i])) hasNums = true
-    if (characters.includes(password[i])) hasChar = true
+    if (characters.includes(password[i])) hasChara = true
   }
 
-  return hasLong && hasCaps && hasLower && hasNums && hasChar
+  return hasLong && hasCaps && hasLower && hasNums && hasChara
 }
 
 module.exports = validatePassword
